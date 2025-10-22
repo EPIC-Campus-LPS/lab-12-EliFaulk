@@ -17,7 +17,7 @@ public class SortingTester {
 		}
 		
 		
-		arr = QuadSorts.bubbleSort(arr);
+		arr = QuadSorts.selectionSort(arr);
 		
 		
 		for (int num : arr) {
