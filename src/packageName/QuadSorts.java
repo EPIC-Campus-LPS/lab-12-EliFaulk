@@ -58,13 +58,20 @@ public class QuadSorts {
 			for (int i = 1 + arr.length/2; i < arr.length; i++) {
 				arr[i] = arr2[i - 1 - arr.length/2];
 			}
+			return arr;
 		} else if (arr.length > 2) {
 			int[] arr1 = Arrays.copyOfRange(arr, 0, arr.length/2);
 			int[] arr2 = Arrays.copyOfRange(arr, arr.length/2, arr.length);
 			arr1 = mergeSort(arr1);
 			arr2 = mergeSort(arr2);
-			for (int i = )
-		} else if (arr.length == 2) //BASE CASE (array is 2 numbers, sort them) {
+			for (int i = 0; i < arr.length/2; i++) {
+				arr[i] = arr1[i];
+			}
+			for (int i = arr.length/2; i < arr.length; i++) {
+				arr[i] = arr2[i - arr.length/2];
+			}
+			return arr;
+		} else if (arr.length == 2) { //BASE CASE (array is 2 numbers, sort them) 
 			if (arr[0] > arr[1]) {
 				int temp = arr[0];
 				arr[0] = arr[1];

@@ -13,17 +13,19 @@ public class SortingTester {
 		
 		for (int i = 0; i < arr.length; i++) {
 			Random random = new Random();
-			arr[i] = random.nextInt();
+			arr[i] = random.nextInt(100);
 		}
 		
-		
-		arr = QuadSorts.selectionSort(arr);
-		
+		double start = System.currentTimeMillis();
+		arr = QuadSorts.insertionSort(arr);
+		double end = System.currentTimeMillis();
 		
 		for (int num : arr) {
 			System.out.print(num + ", ");
 		}
 		
+		double time = end - start;
+		System.out.println("\n" + time);
 
 	}
 
