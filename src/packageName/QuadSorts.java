@@ -5,7 +5,7 @@ public class QuadSorts {
 	
 	
 	public static int[] bubbleSort(int[] arr) {
-		for (int i = arr.length-1; i > 1; i++) {
+		for (int i = arr.length-1; i > 1; i--) {
 			for (int j = 0; j < i; j++) {
 				if (arr[j] > arr[j+1]) {
 					int temp = arr[j];
@@ -58,6 +58,7 @@ public class QuadSorts {
 			for (int i = 1 + arr.length/2; i < arr.length; i++) {
 				arr[i] = arr2[i - 1 - arr.length/2];
 			}
+			arr = selectionSort(arr);
 			return arr;
 		} else if (arr.length > 2) {
 			int[] arr1 = Arrays.copyOfRange(arr, 0, arr.length/2);
@@ -70,6 +71,7 @@ public class QuadSorts {
 			for (int i = arr.length/2; i < arr.length; i++) {
 				arr[i] = arr2[i - arr.length/2];
 			}
+			arr = selectionSort(arr);
 			return arr;
 		} else if (arr.length == 2) { //BASE CASE (array is 2 numbers, sort them) 
 			if (arr[0] > arr[1]) {

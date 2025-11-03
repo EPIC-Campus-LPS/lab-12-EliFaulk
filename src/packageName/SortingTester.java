@@ -17,7 +17,7 @@ public class SortingTester {
 		}
 		
 		double start = System.currentTimeMillis();
-		arr = QuadSorts.insertionSort(arr);
+		arr = QuadSorts.mergeSort(arr);
 		double end = System.currentTimeMillis();
 		
 		for (int num : arr) {
